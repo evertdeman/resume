@@ -1,11 +1,14 @@
 import { useRef } from "react";
 
-import { FaPrint } from "react-icons/fa";
+import { Tooltip } from "react-tooltip";
+import { FaDownload } from "react-icons/fa6";
 
 import html2canvas from "html2canvas";
 import { jsPDF } from "jspdf";
 
 import FrontPage from "./components/FrontPage";
+
+import styles from "./App.module.scss";
 
 function App() {
   const componentRef = useRef<HTMLDivElement>(null);
@@ -29,13 +32,29 @@ function App() {
     pdf.save("download.pdf");
   };
 
+  const DownloadButton = () => {
+    
+    return (
+      <div className={styles.download}>
+        <a
+          data-tooltip-content="Download as PDF"
+          data-tooltip-id="download"
+          onClick={handleCreatePdf}
+        >
+          <FaDownload size={20} />
+        </a>
+        <Tooltip id="download" />
+      </div>
+    );
+  };
+
   return (
-    <>
-      <FaPrint onClick={handleCreatePdf} />
+    <div className={styles.app}>
+      <DownloadButton />
       <div>
         <FrontPage pageRef={componentRef} />
       </div>
-    </>
+    </div>
   );
 }
 

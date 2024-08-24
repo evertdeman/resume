@@ -1,0 +1,13 @@
+.app {
+    .download {
+        text-align: center;
+        margin-top: 30px;
+
+        a {
+            transition: color 0.3 ease;
+        }
+        a:hover {
+            color: #f00;
+        }
+    }
+}
