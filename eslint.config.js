@@ -32,6 +32,7 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       '@typescript-eslint/await-thenable': 'error',
+      "@typescript-eslint/no-unsafe-member-access": "warning"
     },
   },
   prettierConfig
