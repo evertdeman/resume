@@ -7,16 +7,16 @@ $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
 
-$font-size-default: 7pt;
+$font-size-default: 12pt;
 // Subsequent font sizes are relative to default size.
 $font-size-small: 0.85rem;
 $font-size-extra-small: 0.75rem;
 $table-font-size-default: 1rem;
 $table-font-size-small: 0.85rem;
 
-$font-color-default: colors.get('grey90PercentBlack');
+$font-color-default: colors.get('grey80PercentBlack');
 $font-weight-default: $font-weight-regular;
 
 // Careful: Increasing this easily pushes table sizes to overflow page margins,
 // because tables are currently tightly packed.
-$letter-spacing-wide: 0.1mm;
+$letter-spacing-wide: 1mm;

@@ -13,6 +13,11 @@ html {
   color: text.$font-color-default;
 }
 
+h1 {
+  font-size: 36pt;
+  font-weight: text.$font-weight-bold;
+}
+
 html,
 body {
   margin: 0;

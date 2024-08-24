@@ -1,14 +1,18 @@
-import Page from "./Page";
-import Header from "./Header";
+import Page from './Page'
+import Header from './Header'
 
-import styles from "./FrontPage.module.scss";
+import styles from './FrontPage.module.scss'
 
-export default function FrontPage(): React.JSX.Element {
+interface FrontPageProps {
+  pageRef: React.RefObject<HTMLDivElement>
+}
+
+export default function FrontPage({pageRef}: FrontPageProps): React.JSX.Element {
   return (
     <div className={styles.frontpage}>
-      <Page>
+      <Page pageRef={pageRef} >
         <Header />
       </Page>
     </div>
-  );
+  )
 }

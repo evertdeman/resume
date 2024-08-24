@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react'
 
-import styles from "./Page.module.scss";
+import styles from './Page.module.scss'
 
 interface PageProps {
-  children: React.ReactNode;
+  pageRef: React.RefObject<HTMLDivElement>
+  children: React.ReactNode
 }
 
-export default function Page({ children }: PageProps): React.JSX.Element {
-  return <div className={styles.page}>{children}</div>;
+export default function Page({ pageRef, children }: PageProps): React.JSX.Element {
+  return <div ref={pageRef} className={styles.page}>{children}</div>
 }

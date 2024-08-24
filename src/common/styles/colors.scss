@@ -11,7 +11,7 @@ $colors: (
   'grey60PercentWhite': color.adjust(#fff, $lightness: -40%),
   'grey85PercentWhite': color.adjust(#fff, $lightness: -15%),
   'grey90PercentWhite': color.adjust(#fff, $lightness: -10%),
-  'grey95PercentWhite': color.adjust(#fff, $lightness: -5%),
+  'grey95PercentWhite': color.adjust(#fff, $lightness: -5%)
 );
 
 // util function to get color constants
