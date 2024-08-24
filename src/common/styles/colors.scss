@@ -1,0 +1,24 @@
+@use 'sass:color';
+
+$colors: (
+  // --- base background & text colors ---
+  'black': #000,
+  'white': #fff,
+  'grey60PercentBlack': color.adjust(#000, $lightness: +40%),
+  'grey80PercentBlack': color.adjust(#000, $lightness: +20%),
+  'grey85PercentBlack': color.adjust(#000, $lightness: +15%),
+  'grey90PercentBlack': color.adjust(#000, $lightness: +10%),
+  'grey60PercentWhite': color.adjust(#fff, $lightness: -40%),
+  'grey85PercentWhite': color.adjust(#fff, $lightness: -15%),
+  'grey90PercentWhite': color.adjust(#fff, $lightness: -10%),
+  'grey95PercentWhite': color.adjust(#fff, $lightness: -5%),
+);
+
+// util function to get color constants
+@function get($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+  @warn "Unknown `#{$key}`.";
+  @return null;
+}

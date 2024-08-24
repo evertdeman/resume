@@ -1,0 +1,19 @@
+// Prevent styling to be applied to print
+@media screen {
+  .frontpage {
+    padding: 1cm;
+    gap: 1cm;
+    align-items: center;
+  }
+}
+
+.frontpage {
+  transform-origin: center top;
+  transform: scale(100%);
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  transition: transform 0.1s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+}

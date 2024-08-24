@@ -1,0 +1,15 @@
+.page {
+  // They correspond to an A4 format with 150 dpi.
+  width: 1240px;
+  height: 1755px;
+
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  padding: 0 50px;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+  box-sizing: border-box;
+}

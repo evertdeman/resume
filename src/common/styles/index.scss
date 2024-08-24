@@ -1,0 +1,45 @@
+@use 'src/common/styles/colors.scss' as colors;
+@use 'src/common/styles/text.scss' as text;
+
+* {
+  image-rendering: optimizeQuality !important;
+  print-color-adjust: exact !important;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: text.$font-name, sans-serif;
+  font-size: text.$font-size-default;
+  color: text.$font-color-default;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+}
+
+#app {
+  width: 100%;
+
+  > p {
+    display: inline-block;
+    margin: 1mm;
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+    padding: 2mm 4mm;
+    border-radius: 2mm;
+  }
+}
+
+@media print {
+  #app {
+    > p {
+      display: none;
+    }
+  }
+}
